@@ -42,7 +42,7 @@ exports.Addition = function (req, res) {
     res.end(JSON.stringify(reqParams));
 }
 
-exports.Soustraction = function (req, res) {
+exports.Substraction = function (req, res) {
     const reqParams = url.parse(req.url, true).query;
 
     const x = Number(reqParams['x']);
@@ -118,7 +118,7 @@ exports.Modulo = function (req, res) {
     res.end(JSON.stringify(reqParams));
 }
 
-exports.Factoriel = function (req, res) {
+exports.Factor = function (req, res) {
     const reqParams = url.parse(req.url, true).query;
 
     const n = Number(reqParams['n']);
@@ -136,7 +136,7 @@ exports.Factoriel = function (req, res) {
     res.end(JSON.stringify(reqParams));
 }
 
-exports.EstPremier = function (req, res) {
+exports.IsPrime = function (req, res) {
     const reqParams = url.parse(req.url, true).query;
     const n = Number(reqParams['n']);
 
@@ -152,7 +152,7 @@ exports.EstPremier = function (req, res) {
     res.setHeader('content-Type', 'Application/json');
     res.end(JSON.stringify(reqParams));
 }
-exports.Premier = function (req, res) {
+exports.nPrime = function (req, res) {
     const reqParams = url.parse(req.url, true).query;
 
     const n = Number(reqParams['n']);
@@ -203,8 +203,32 @@ const availableEndpoints = [
     },
     {
         method: "GET",
-        Soustraction: "/math?op=-&x=1&y=1"
-    }
+        Substraction: "/math?op=-&x=1&y=1"
+    },
+    {
+        method: "GET",
+        Multiplication: "/math?op=*&x=1&y=1"
+    },
+    {
+        method: "GET",
+        Division: "/math?op=/&x=1&y=1"
+    },
+    {
+        method: "GET",
+        Modulo: "/math?op=%&x=1&y=1"
+    },
+    {
+        method: "GET",
+        Factor: "/math?op=!&n=1"
+    },
+    {
+        method: "GET",
+        IsPrime: "/math?op=p&n=1"
+    },
+    {
+        method: "GET",
+        NPrime: "/math?op=np&n=1"
+    },
 ]
 
 function Factoriel(n) {
