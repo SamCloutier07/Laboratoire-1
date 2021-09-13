@@ -20,7 +20,7 @@ module.exports = http.createServer((req, res) => {
         Operation.Addition(req, res);
     } else if (symbol == '-' && req.method === 'GET') {
         console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
-        Operation.Soustraction(req, res);
+        Operation.Substraction(req, res);
 
     } else if (symbol == '*' && req.method === 'GET') {
         console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
@@ -36,15 +36,15 @@ module.exports = http.createServer((req, res) => {
 
     } else if (symbol == '!' && req.method === 'GET') {
         console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
-        Operation.Factoriel(req, res);
+        Operation.Factor(req, res);
 
     } else if (symbol == 'p' && req.method === 'GET') {
         console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
-        Operation.EstPremier(req, res);
+        Operation.IsPrime(req, res);
 
     } else if (symbol == 'np' && req.method === 'GET') {
         console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
-        Operation.Premier(req, res);
+        Operation.nPrime(req, res);
 
     } else {
         console.log('Request type: ' + req.method + ' Endpoint: ' + req.url);
