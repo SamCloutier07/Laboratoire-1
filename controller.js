@@ -180,7 +180,7 @@ exports.OpUndefinend = function (req, res) {
 exports.invalidUrl = function (req, res) {
     var response = [
         {
-            "message": "Endpoint incorrect. Les options possibles sont "
+            "message": "Wrong Endpoint. Possible options are :  "
         },
         availableEndpoints
     ]
@@ -199,35 +199,35 @@ exports.invalidOperation = function (req, res) {
 const availableEndpoints = [
     {
         method: "GET",
-        Addition: "/math?op=+&x=1&y=1"
+        Addition: "/maths?op=+&x=1&y=1"
     },
     {
         method: "GET",
-        Substraction: "/math?op=-&x=1&y=1"
+        Substraction: "/maths?op=-&x=1&y=1"
     },
     {
         method: "GET",
-        Multiplication: "/math?op=*&x=1&y=1"
+        Multiplication: "/maths?op=*&x=1&y=1"
     },
     {
         method: "GET",
-        Division: "/math?op=/&x=1&y=1"
+        Division: "/maths?op=/&x=1&y=1"
     },
     {
         method: "GET",
-        Modulo: "/math?op=%&x=1&y=1"
+        Modulo: "/maths?op=%&x=1&y=1"
     },
     {
         method: "GET",
-        Factor: "/math?op=!&n=1"
+        Factor: "/maths?op=!&n=1"
     },
     {
         method: "GET",
-        IsPrime: "/math?op=p&n=1"
+        IsPrime: "/maths?op=p&n=1"
     },
     {
         method: "GET",
-        NPrime: "/math?op=np&n=1"
+        NPrime: "/maths?op=np&n=1"
     },
 ]
 
