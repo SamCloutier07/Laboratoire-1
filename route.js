@@ -54,7 +54,6 @@ module.exports = http.createServer((req, res) => {
     }
 })
 
-
 function AccessControlConfig(res) {
     res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Methods', '*');
