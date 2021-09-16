@@ -6,12 +6,15 @@ let hasError = false;
 
 function ErrorCheck(x, y, params) {
     error = "";
+
     if (Object.keys(params).length >= 4) { error = "Too many parameters"; return true; }
     else if (!('x' in params)) { error = "'x' parameter is missing"; return true; }
     else if (!('y' in params)) { error = "'y' parameter is missing"; return true; }
     else if (isNaN(x) && isNaN(y)) { error = "x and y are not numbers"; return true; }
     else if (isNaN(x)) { error = "x is not a number"; return true; }
     else if (isNaN(y)) { error = "y is not a number"; return true; }
+    else if (!Number.isInteger(x)) { error = "x is not a integer (Number without decimals)"; return true; }
+    else if (!Number.isInteger(y)) { error = "y is not a integer (Number without decimals)"; return true; }
 }
 
 function ErrorCheckN(n, params) {
